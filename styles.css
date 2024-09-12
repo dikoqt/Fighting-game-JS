@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+* {
+    box-sizing: border-box;
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root {
+    --border-width: 4px;
+    --main-color: #a78bfa;
+    --health-bar-color: #dc2626;
+    --border-color: white;
+    --timer-bg-color: black;
+    --timer-text-color: white;
+}
+
+.container {
+    position: relative;
+    display: inline-block;
+}
+
+.small-container {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 20px;
+}
+
+.health-bar-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    height: 30px;
+}
+
+/* Стиль для здоровья игрока */
+.player-health {
+    justify-content: flex-end;
+    border-top: var(--border-width) solid var(--border-color);
+    border-left: var(--border-width) solid var(--border-color);
+    border-bottom: var(--border-width) solid var(--border-color);
+}
+
+/* Стиль для здоровья врага */
+.enemy-health {
+    border-top: var(--border-width) solid var(--border-color);
+    border-right: var(--border-width) solid var(--border-color);
+    border-bottom: var(--border-width) solid var(--border-color);
+}
+
+.health-bar {
+    background-color: var(--health-bar-color);
+    width: 100%;
+}
+
+.health-bar-content {
+    position: absolute;
+    background: var(--main-color);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.timerCount {
+    background-color: var(--timer-bg-color);
+    width: 100px;
+    height: 50px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--timer-text-color);
+    border: var(--border-width) solid var(--border-color);
+}
+
+.game-result {
+    position: absolute;
+    color: var(--timer-text-color);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.blinking {
+    animation: blink .5s infinite;
+}
+
+/* моргание */
+@keyframes blink {
+    0%, 100% {
+        color: white;
+    }
+    50% {
+        color: red;
+    }
+}
+
+

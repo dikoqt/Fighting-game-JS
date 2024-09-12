@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="small-container">
+            <div class="health-bar-container player-health">
+                <div class="health-bar"></div>
+                <div class="health-bar-content" id="playerHealth"></div>
+            </div>
+            <div class="timerCount" id="timer">60</div>
+            <div class="health-bar-container enemy-health">
+                <div class="health-bar"></div>
+                <div class="health-bar-content" id="enemyHealth"></div>
+            </div>
+        </div>
+        <div class="game-result" id="displayText">Tie</div>
+        <canvas></canvas>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/utils.js"></script>
+    <script src="./js/classes.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
