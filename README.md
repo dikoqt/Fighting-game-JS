@@ -1,4 +1,1 @@
-# fighting-game
-# fighting-game
-# fighting-gamenajs
-# fighting-gamenajs
+To run game open index.html in any browser.
